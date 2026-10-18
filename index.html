@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB" data-theme="day">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Katsuro · Real Japanese katsu on St John’s Hill, Clapham Junction</title>
+    <meta name="description" content="We make real Japanese Katsu: crispy, tender, unforgettable. Signature sets every day, sandos and dons at weekday lunch, eight minutes’ walk from Clapham Junction at 189 St John’s Hill." />
+    <meta name="theme-color" content="#f6eedf" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Katsuro" />
+    <meta property="og:title" content="Katsuro · Real Japanese katsu, Clapham Junction" />
+    <meta property="og:description" content="Crispy, tender, unforgettable. Katsu sets every day, sandos and dons at weekday lunch, at 189 St John’s Hill. Book a table or ring ahead to collect." />
+    <meta property="og:url" content="https://alexwilder-dev.github.io/katsuro/" />
+    <meta property="og:image" content="https://alexwilder-dev.github.io/katsuro/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Katsuro’s tonkatsu, cut and laid beside sesame-dressed cabbage on a ridged blue plate, with the Katsuro logo" />
+    <meta property="og:locale" content="en_GB" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Katsuro · Real Japanese katsu, Clapham Junction" />
+    <meta name="twitter:description" content="Crispy, tender, unforgettable. Katsu sets every day, sandos and dons at weekday lunch, at 189 St John’s Hill." />
+    <meta name="twitter:image" content="https://alexwilder-dev.github.io/katsuro/og.jpg" />
+    <meta name="twitter:image:alt" content="Katsuro’s tonkatsu, cut and laid beside sesame-dressed cabbage on a ridged blue plate, with the Katsuro logo" />
+
+    <link rel="canonical" href="https://alexwilder-dev.github.io/katsuro/" />
+    <link rel="icon" type="image/svg+xml" href="https://alexwilder-dev.github.io/katsuro/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://alexwilder-dev.github.io/katsuro/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://alexwilder-dev.github.io/katsuro/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://alexwilder-dev.github.io/katsuro/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding:24px;font-family:sans-serif">Katsuro, 189 St John’s Hill, London SW11 1TH. Call 0207 854 6666. Mon–Fri 12–3pm and 5.30–10pm, Saturday 12–10pm, Sunday 12–9pm.</p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+    (() => {
+      try {
+        if (location.hash === '#me') localStorage.setItem('me', '1');
+        if (localStorage.getItem('me') || sessionStorage.getItem('pinged')) return;
+        sessionStorage.setItem('pinged', '1');
+      } catch (e) {}
+      const v = new URLSearchParams(location.search).get('v') || 'untagged';
+      fetch('https://ntfy.sh/YOUR-NTFY-TOPIC', {
+        method: 'POST', body: `${v} opened ${location.pathname}`, keepalive: true
+      }).catch(() => {});
+    })();
+    </script>
+  </body>
+</html>
