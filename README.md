@@ -25,7 +25,7 @@ npm run build     # type-check and build to dist/
 npm run preview   # serve the build
 ```
 
-The site uses `HashRouter` and is built for GitHub Pages at `/katsuro/`. The workflow in `.github/workflows/deploy.yml` builds and publishes on every push to `main`. In the repository settings, Pages needs **Source: GitHub Actions**.
+The site uses `HashRouter` and is built for GitHub Pages at `/katsuro/`. The workflow in `.github/workflows/deploy.yml` builds on every push and publishes from the default branch. In the repository settings, Pages needs **Source: GitHub Actions**.
 
 ## Assets
 
